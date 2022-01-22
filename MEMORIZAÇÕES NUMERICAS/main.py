@@ -48,7 +48,7 @@ while True:
                 os.system('cls')
                 while True:
                     try:
-                        menu.cadasmenu(['2 players','3 players','4 players','voltar'],'MULTIPLAYER')
+                        menu.cadasmenu(['voltar','2 players','3 players','4 players'],'MULTIPLAYER')
                         multiplayer=int(input('Escolha um modo: '))
 
                     except ValueError:
@@ -59,7 +59,7 @@ while True:
                     else:
                         if multiplayer >= 1 and multiplayer <= 5:
                             print("continuando...")
-                            if not multiplayer == 4:
+                            if not multiplayer == 1:
                                 sleep(1)
                             break
                         else:
@@ -170,7 +170,7 @@ while True:
 
 
 
-        if multiplayer == 1:
+        if multiplayer == 2:
             titulo("2 players")
             player1=str(input("nome do player 1: "))
             player2=str(input("nome do player 2: "))
@@ -232,7 +232,7 @@ while True:
                                 break
                     if ok:
                         break
-        elif multiplayer == 2:
+        elif multiplayer == 3:
             os.system('cls')
             titulo("3 players")
             jogadores.append(str(input("qual é seu nome, player 1?: ")))
@@ -292,7 +292,7 @@ while True:
 
                 if okk:		
                     vez+=1
-        elif multiplayer == 3:
+        elif multiplayer == 4:
             os.system('cls')
             titulo("4 players")
             jogadores.append(str(input("qual é seu nome, player 1?: ")))
@@ -356,7 +356,7 @@ while True:
                     vez+=1
                 if not okk and rodada > 4:
                     vez-=1 
-        elif multiplayer== 4:
+        elif multiplayer== 1:
             sim=False
 
     elif modo == 3:
@@ -385,7 +385,7 @@ while True:
         os.system('cls')
         sim=False
         titulo('COMO JOGAR?')
-        print("""A cada rodada, seu computador irár gerar um numero de uma 1 á 5 e adicionar-lo em uma lista de numeros, depois, o jogador tera que responder o primeiro numero ate o ultimo da lista na ordem.\na cada rodada a lista de numeros vai ficando maior e mais difícil de decorar\n\nse você for derrotado no modo solo o jogo irá guardar sua pontuação e fazer um Ranking de colocados com mais pontuação (ranking de colocados sera adicionados nas proximas versões)\n\nse um dos jogadores for derrotado no modo multiplayer, ele sera eliminado e não tera mais vez, a lista vai continuar crecendo e os jogadores restantes continuara jogando. O jogo só vai acabar quando sobrar um jogador, que sera o vitorioso.\n""")
+        print("""A cada rodada, seu computador irár gerar um numero de uma 1 á 5 e adicionar-lo em uma lista de numeros, depois, o jogador tera que responder o primeiro numero ate o ultimo da lista na ordem.\na cada rodada a lista de numeros vai ficando maior e mais difícil de decorar\n\nse você for derrotado no modo solo, o jogo irá guardar sua pontuação e fazer um Ranking de colocados com mais pontuação \n\nse um dos jogadores for derrotado no modo multiplayer, ele sera eliminado e não tera mais vez, a lista vai continuar crecendo e os jogadores restantes continuara jogando. O jogo só vai acabar quando sobrar um jogador, que sera o vitorioso.\n""")
         input('Aperte ENTER para continuar. ')
         os.system('cls')
 
